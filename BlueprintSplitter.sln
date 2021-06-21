@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.218
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintSplitter", "BlueprintSplitter\BlueprintSplitter.csproj", "{A89AA953-7B22-4B74-BD04-1B96418BE40A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A89AA953-7B22-4B74-BD04-1B96418BE40A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A89AA953-7B22-4B74-BD04-1B96418BE40A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A89AA953-7B22-4B74-BD04-1B96418BE40A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A89AA953-7B22-4B74-BD04-1B96418BE40A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56DA7E2D-E6B2-49F9-BA98-B3C72FBC8D0C}
+	EndGlobalSection
+EndGlobal

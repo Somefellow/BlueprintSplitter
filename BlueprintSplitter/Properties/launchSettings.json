@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BlueprintSplitter": {
+      "commandName": "Project",
+      "commandLineArgs": "10000 blueprint.txt out.txt"
+    }
+  }
+}
