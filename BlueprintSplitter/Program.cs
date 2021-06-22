@@ -10,6 +10,11 @@ namespace BlueprintSplitter
     {
         public static void Main(string[] args)
         {
+            SplitBlueprint(args);
+        }
+
+        public static void SplitBlueprint(string[] args)
+        {
             if (args.Count() != 3)
             {
                 Console.WriteLine($"Usage: {Path.GetFileName(System.Reflection.Assembly.GetEntryAssembly().Location)} <blueprint_size_limit> <input_filename> <output_filename>");
@@ -19,7 +24,7 @@ namespace BlueprintSplitter
             int blueprintSizeLimit = int.Parse(args[0]);
             string blueprint = File.ReadAllText(args[1]);
             string outputFilename = args[2];
-            
+
             // Parse input
             string decodedBlueprint = Blueprint.Decode(blueprint);
             var inputBlueprint = JObject.Parse(decodedBlueprint);
