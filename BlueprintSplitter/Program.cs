@@ -18,6 +18,7 @@ namespace BlueprintSplitter
             if (args.Count() != 3)
             {
                 Console.WriteLine($"Usage: {Path.GetFileName(System.Reflection.Assembly.GetEntryAssembly().Location)} <blueprint_size_limit> <input_filename> <output_filename>");
+                Environment.Exit(1);
             }
 
             // Input params
