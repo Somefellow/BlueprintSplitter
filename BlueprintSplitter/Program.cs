@@ -23,11 +23,16 @@ namespace BlueprintSplitter
 
             // Input params
             int blueprintSizeLimit = int.Parse(args[0]);
-            string blueprint = File.ReadAllText(args[1]);
+            string blueprintString = File.ReadAllText(args[1]);
             string outputFilename = args[2];
 
+            File.WriteAllText(outputFilename, SplitBlueprintIntoBook(blueprintString, blueprintSizeLimit));
+        }
+
+        private static string SplitBlueprintIntoBook(string blueprintString, int blueprintSizeLimit)
+        {
             // Parse input
-            string decodedBlueprint = Blueprint.Decode(blueprint);
+            string decodedBlueprint = Blueprint.Decode(blueprintString);
             var inputBlueprint = JObject.Parse(decodedBlueprint);
 
             // Setup Blueprint book
@@ -90,16 +95,7 @@ namespace BlueprintSplitter
                 }
             }
 
-            File.WriteAllText(outputFilename, Blueprint.Encode(blueprintBook.ToString(Newtonsoft.Json.Formatting.None)));
-
-            //for (int i = 0; i < (blueprintBook["blueprint_book"]["blueprints"] as JArray).Count(); i++)
-            //{
-            //    File.WriteAllText($"{i}.txt", (blueprintBook["blueprint_book"]["blueprints"] as JArray)[i].ToString());
-            //}
-
-            //File.WriteAllText($"blueprint.txt", blueprintBook.ToString());
-            //Console.WriteLine(Blueprint.Encode(blueprintBook.ToString(Newtonsoft.Json.Formatting.None)));
-            //Console.ReadLine();
+            return Blueprint.Encode(blueprintBook.ToString(Newtonsoft.Json.Formatting.None));
         }
     }
 }
